@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Canción Única - Canciones Personalizadas</title>
+    <meta name="description" content="Creamos canciones únicas y personalizadas para tus momentos especiales">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-purple-50 to-pink-50">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative text-center text-white px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Tu Canción Única,<br>Tu Historia Personalizada</h1>
+            <p class="text-xl md:text-2xl mb-8">Creamos melodías que cuentan tu historia única</p>
+            <a href="#contact-form" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 inline-flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-2xl"></i>
+                Comienza Tu Canción
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-20 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Cuéntanos tu Historia</h2>
+            <form action="/submit" method="POST" class="space-y-6 bg-white rounded-xl shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                </div>
+                <div>
+                    <label for="occasion" class="block text-gray-700 font-medium mb-2">Ocasión Especial</label>
+                    <select id="occasion" name="occasion" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <option value="">Selecciona una ocasión</option>
+                        <option value="boda">Boda</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 font-medium mb-2">Tu Historia</label>
+                    <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 inline-flex items-center">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Enviar Historia
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Proceso Creativo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-comments text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Consulta inicial</h3>
+                    <p class="text-gray-600">Conocemos tu historia y visión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Nuestros Planes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-b from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4">Básico</h3>
+                    <p class="text-4xl font-bold mb-6">$299 <span class="text-base font-normal">USD</span></p>
+                    <ul class="mb-8 space-y-4">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Canción personalizada</li>
+                    </ul>
+                    <a href="#contact-form" class="block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Seleccionar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Testimonios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">María García</h4>
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"La canción capturó perfectamente nuestra historia de amor."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="#contact-form" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
