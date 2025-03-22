@@ -1,9 +1,3 @@
- plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
-    require('@formkit/themes/tailwindcss'),
-  ],
-
 module.exports = {
     content: [
         ./src/**/*.{js,jsx,ts,tsx,html},
