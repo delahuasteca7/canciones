@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./index.html",           // Archivos HTML en la raíz
-    "./src/.{js,jsx,ts,tsx,html}",   // Archivos en la carpeta src (ajusta según tu estructura)
+    "./**/*.{js,jsx,ts,tsx,html}",   // Archivos en la carpeta src (ajusta según tu estructura)
   ],
      theme: {
         extend: {
