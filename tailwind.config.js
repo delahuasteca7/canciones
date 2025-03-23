@@ -1,9 +1,10 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        "./index.html",
-        "./src/**/*.{vue,js,jsx,ts,tsx,html}",
-        ],
-    theme: {
+  content: [
+    "./index.html",           // Archivos HTML en la raíz
+    "./src/**/*.{html,js}",   // Archivos en la carpeta src (ajusta según tu estructura)
+  ],
+     theme: {
         extend: {
             colors: {
                 primary: {
