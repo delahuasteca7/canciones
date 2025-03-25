@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de canciones personalizadas | Música personalizada</title>
+    <meta name="description" content="Crea tu canción personalizada perfecta con nuestro servicio profesional de composición. Desde bodas hasta ocasiones especiales, creamos recuerdos musicales únicos.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --background: #f8fafc;
+            --foreground: #1e293b;
+            --primary: #1c8806;
+            --primary-light: #8b5cf6;
+            --secondary: #e2e8f0;
+            --accent: #64748b;
+            --border: #e2e8f0;
+            --input: #cbd5e1;
+        }
+        
+        .bg-background { background-color: var(--background); }
+        .bg-foreground { background-color: var(--foreground); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        
+        .text-foreground { color: var(--foreground); }
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-accent { color: var(--accent); }
+        
+        .border-border { border-color: var(--border); }
+        .border-input { border-color: var(--input); }
+        
+        .bg-primary\/90 { background-color: rgba(124, 58, 237, 0.9); }
+        .bg-secondary\/90 { background-color: rgba(226, 232, 240, 0.9); }
+    </style>
+</head>
+<body class="bg-background font-sans text-foreground">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative text-center text-white z-10 px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Tu historia, nuestra música</h1>
+            <p class="text-xl md:text-2xl mb-8">Crea una canción única que capture tu momento especial.</p>
+            <a href="#whatsappForm">
+            <button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all">Comienza tu viaje musical</button>
+            </a>    
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-20 px-4 bg-white">
+        <h2 class="text-4xl font-bold text-center mb-16">Elige tu paquete perfecto</h2>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <!-- Basic Plan -->
+            <div class="border-2 border-primary rounded-lg p-8 hover:shadow-lg transition-shadow">
+                <h3 class="text-2xl font-bold mb-4">Melodía básica</h3>
+                <p class="text-4xl font-bold mb-6">$299</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Grabación profesional</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Descarga digital</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>1 Revisión</li>
+                </ul>
+                <!-- button class="w-full bg-secondary hover:bg-secondary/90 text-foreground font-bold py-3 rounded-lg">Seleccionar básico</button -->
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="border-2 border-primary rounded-lg p-8 shadow-lg transform scale-105">
+                <h3 class="text-2xl font-bold mb-4">Composición Premium</h3>
+                <p class="text-4xl font-bold mb-6">$499</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Grabación profesional</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Descarga digital</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>3 Revisiones</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Múltiples instrumentos</li>
+                </ul>
+                <!-- button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg">Selecciona Premium</button -->
+            </div>
+
+            <!-- Deluxe Plan -->
+            <div class="border-2 border-primary rounded-lg p-8 hover:shadow-lg transition-shadow">
+                <h3 class="text-2xl font-bold mb-4">Experiencia de lujo</h3>
+                <p class="text-4xl font-bold mb-6">$799</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Grabación Profesional</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Descarga digital</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Revisiones ilimitadas</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Orquesta completa</li>
+                    <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i>Video musical</li>
+                </ul>
+                <!-- button class="w-full bg-secondary hover:bg-secondary/90 text-foreground font-bold py-3 rounded-lg">Selecciona Deluxe</button -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 px-4 bg-secondary">
+        <h2 class="text-4xl font-bold text-center mb-16">Cómo creamos tu canción</h2>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-8">
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-comments text-white text-2xl"></i>
+                </div>
+                <h3 class="font-bold mb-2">Consulta</h3>
+                <p class="text-accent">Platica inicial sobre su visión</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-music text-white text-2xl"></i>
+                </div>
+                <h3 class="font-bold mb-2">Concepto</h3>
+                <p class="text-accent">Dirección musical y estilo</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-pen text-white text-2xl"></i>
+                </div>
+                <h3 class="font-bold mb-2">Letra</h3>
+                <p class="text-accent">Escribiendo tu historia en palabras</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-microphone text-white text-2xl"></i>
+                </div>
+                <h3 class="font-bold mb-2">Grabación</h3>
+                <p class="text-accent">Sesión de estudio profesional</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 mx-auto bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-gift text-white text-2xl"></i>
+                </div>
+                <h3 class="font-bold mb-2">Entrega</h3>
+                <p class="text-accent">Tu obra maestra terminada</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form -->
+<section class="py-20 px-4 bg-white">
+    <div class="whatsappForm" id="whatsappForm">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md max-w-[400px] mx-auto">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contáctanos por WhatsApp</h1>
+        
+        <form id="whatsappForm" class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                <input type="text" id="name" name="name" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            </div>
+            
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                <input type="tel" id="phone" name="phone" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            </div>
+            
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email (opcional)</label>
+                <input type="email" id="email" name="email" 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+            </div>
+            
+            <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Servicio de interés</label>
+                <select id="service" name="service" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    <option value="Basico">Paquete Básico ($299)</option>
+                    <option value="Premium">Paquete Premium ($499)</option>
+                    <option value="Deluxe">Paquete Deluxe ($799)</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="evento" class="block text-sm font-medium mb-2">Tipo de evento</label>
+                <select id="evento" name="evento"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    <option value="Boda">Boda</option>
+                    <option value="Cumple">Cumpleaños</option>
+                    <option values="Aniver">Aniversario</option>
+                    <option values="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                <textarea id="message" name="message" rows="3" 
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+            </div>
+            
+            <button type="submit" 
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp"></i>
+                Enviar por WhatsApp
+            </button>
+        </form>
+    </div>
+</div>
+</section>
+          
+    <!-- Testimonials -->
+    <section class="py-20 px-4 bg-secondary">
+        <h2 class="text-4xl font-bold text-center mb-16">Testimonios</h2>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div>
+                        <h3 class="font-bold">Sarahi Redondo</h3>
+                        <p class="text-accent">Canción de Boda</p>
+                    </div>
+                </div>
+                <p class="text-foreground">"La canción que crearon para nuestro primer baile fue absolutamente perfecta. Capturó nuestra historia de amor a la perfección.."</p>
+                <div class="flex text-primary mt-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div>
+                        <h3 class="font-bold">Roberto López</h3>
+                        <p class="text-accent">Regalo de Aniversario</p>
+                    </div>
+                </div>
+                <p class="text-foreground">"Sorprendí a mi esposa con una canción personalizada para nuestro aniversario. El equipo facilitó muchísimo el proceso y el resultado fue increíble."</p>
+                <div class="flex text-primary mt-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/7716810542?text=Hola, tengo interes en sus servicios de creación de canciones personalizadas. Por favor envíenme más información." class="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-colors z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-foreground text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-bold mb-4">Contactanos</h4>
+                <p>Email: info@customsongs.com</p>
+                <p>Phone: (771) 681-0542</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Accesos rápidos</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary">Sobre nosotros</a></li>
+                    <li><a href="#" class="hover:text-primary">Servicios</a></li>
+                    <li><a href="#" class="hover:text-primary">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary">Politicas de Privacidad</a></li>
+                    <li><a href="#" class="hover:text-primary">Terminos del servicio</a></li>
+                    <li><a href="#" class="hover:text-primary">Copyright </a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Siguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-primary"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-primary"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Reemplaza con tu número de WhatsApp (sin el +)
+            const phoneNumber = '527716810542'; // Ejemplo: 521234567890 para México
+            
+            // Obtener valores del formulario
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const evento = document.getElementById('evento').value;
+            const message = document.getElementById('message').value;
+            
+            // Crear mensaje para WhatsApp
+            let whatsappMessage = `Hola, me interesa su servicio de canciones personalizadas.\n\n`;
+            whatsappMessage += `*Nombre:* ${name}\n`;
+            whatsappMessage += `*Teléfono:* ${phone}\n`;
+            if(email) whatsappMessage += `*Email:* ${email}\n`;
+            whatsappMessage += `*Servicio de interés:* ${service}\n`;
+            whatsappMessage += `*Tipo de evento:* ${evento}\n`;
+            whatsappMessage += `*Mensaje:* ${message}\n\n`;
+            whatsappMessage += `Por favor contáctenme para más información.`;
+            
+            // Codificar el mensaje para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Crear el enlace de WhatsApp
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            // Abrir WhatsApp en una nueva pestaña
+            window.open(whatsappUrl, '_self');
+        });
+    </script>
+
+</body>
+</html>
